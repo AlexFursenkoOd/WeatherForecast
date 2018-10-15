@@ -1,8 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
+using WeatherForecast;
+using WeatherForecast.Models;
+using WeatherForecast.Services;
 
 namespace WeatherForecast.Controllers
 {
@@ -10,21 +14,16 @@ namespace WeatherForecast.Controllers
     {
         public ActionResult Index()
         {
+            //IForecastService service = new ForecastService();
+            //var forecast = await service.GetCurrentForecastByIDAsync(703448).ConfigureAwait(false);
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult GetForecast(int cityID)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            //IForecastService service = new ForecastService();
+            //var forecast = await service.GetCurrentForecastByIDAsync(703448).ConfigureAwait(false);
+            return new JsonResult { Data = "", JsonRequestBehavior = JsonRequestBehavior.AllowGet};
         }
     }
 }
