@@ -7,7 +7,7 @@ using WeatherForecast.Models;
 
 namespace WeatherForecast.Services
 {
-    public interface IForecastService
+    public interface IWeatherForecastService
     {
         Task<Forecast> GetCurrentForecastByIDAsync(int cityID);
     }

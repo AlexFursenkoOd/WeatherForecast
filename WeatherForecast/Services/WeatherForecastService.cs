@@ -11,11 +11,11 @@ using WeatherForecast.Models;
 
 namespace WeatherForecast.Services
 {
-    public class ForecastService : IForecastService
+    public class WeatherForecastService : IWeatherForecastService
     {
         private HttpClient _client;
 
-        public ForecastService()
+        public WeatherForecastService()
         {
             _client = new HttpClient();
         }
